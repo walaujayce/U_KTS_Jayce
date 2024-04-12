@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Kartos.Views.CalibrationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kartos.Views"
+             xmlns:vm="clr-namespace:Kartos.ViewModels"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="#FFC5D9E7">
+    <UserControl.DataContext>
+        <vm:CalibrationViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    Margin="10,0,10,10" >
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,20,0,20">
+                <TextBlock FontSize="20" FontWeight="Bold" Margin="5,0,0,0"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Foreground="{StaticResource PrimaryDarkBrush}"
+                    Text="{Binding Title}"/>
+            </StackPanel>
+            <TabControl Height="373" Background="#FFE2EFF3">
+                <TabItem Header="Mass">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFE2EFF3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid/>
+                </TabItem>
+                <TabItem Header="Uniformity">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFE2EFF3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid/>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</UserControl>
