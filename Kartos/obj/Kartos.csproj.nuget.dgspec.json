@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\U_KTS\\Kartos\\Kartos.csproj": {}
+    "C:\\Users\\user\\Documents\\U_KTS_Jayce\\Kartos\\Kartos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\U_KTS\\Kartos\\Kartos.csproj": {
+    "C:\\Users\\user\\Documents\\U_KTS_Jayce\\Kartos\\Kartos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\U_KTS\\Kartos\\Kartos.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\U_KTS_Jayce\\Kartos\\Kartos.csproj",
         "projectName": "Kartos",
-        "projectPath": "C:\\Users\\user\\Documents\\U_KTS\\Kartos\\Kartos.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\U_KTS_Jayce\\Kartos\\Kartos.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\U_KTS\\Kartos\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\U_KTS_Jayce\\Kartos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

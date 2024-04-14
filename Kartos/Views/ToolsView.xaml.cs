@@ -50,7 +50,7 @@ namespace Kartos.Views
 
         private void Image_PreviewMouseMove(object sender, MouseEventArgs e)
         {
-            if (_isMouseDown)
+            if (_isMouseDown == true && isDrawingLine == false)
             {
                 var c = sender as Image;
                 var pos = e.GetPosition(this);
@@ -125,14 +125,14 @@ namespace Kartos.Views
                     Height = 500,
                     Source = mat.ToBitmapSource()
                 };
-                ///img.AddHandler(Button.MouseDownEvent, new MouseButtonEventHandler(Image_PreviewMouseDown), true);
-                ///img.AddHandler(Button.MouseMoveEvent, new MouseEventHandler(Image_PreviewMouseMove), true);
-                ///img.AddHandler(Button.MouseUpEvent, new MouseButtonEventHandler(Image_PreviewMouseUp), true);
+                img.AddHandler(Button.MouseDownEvent, new MouseButtonEventHandler(Image_PreviewMouseDown), true);
+                img.AddHandler(Button.MouseMoveEvent, new MouseEventHandler(Image_PreviewMouseMove), true);
+                img.AddHandler(Button.MouseUpEvent, new MouseButtonEventHandler(Image_PreviewMouseUp), true);
 
                 // Attach additional handlers for drawing lines
-                img.MouseDown += Image_PointMouseDown;
-                img.MouseMove += Image_PointMouseMove;
-                img.MouseUp += Image_PointMouseUp;
+                img.AddHandler(Button.MouseDownEvent, new MouseButtonEventHandler(Image_PointMouseDown), true);
+                img.AddHandler(Button.MouseMoveEvent, new MouseEventHandler(Image_PointMouseMove), true);
+                img.AddHandler(Button.MouseUpEvent, new MouseButtonEventHandler(Image_PointMouseUp), true);
 
                 MainWindow.GloableConsole.Children.Add(img);
 
@@ -154,7 +154,6 @@ namespace Kartos.Views
             MainWindow.GloableConsole.Children.Add(_overlayCanvas);
 
         }
-        private Point _lineStart;
         private Line _currentLine;
 
         private void Image_PointMouseDown(object sender, MouseButtonEventArgs e)
@@ -163,13 +162,13 @@ namespace Kartos.Views
             {
                 if (e.ChangedButton == MouseButton.Left)
                 {
-                    _lineStart = e.GetPosition(this);
+                    _mouseDownPosition = e.GetPosition(this);
                     _currentLine = new Line()
                     {
-                        X1 = _lineStart.X,
-                        Y1 = _lineStart.Y,
-                        X2 = _lineStart.X,
-                        Y2 = _lineStart.Y,
+                        X1 = _mouseDownPosition.X,
+                        Y1 = _mouseDownPosition.Y,
+                        X2 = _mouseDownPosition.X,
+                        Y2 = _mouseDownPosition.Y,
                         Stroke = System.Windows.Media.Brushes.Red,
                         StrokeThickness = 2
                     };
