@@ -76,12 +76,12 @@
                         <iconPacks:PackIconMaterial Kind="RayStartEnd" Height="20" Width="24" Margin="0,5,0,5"/>
                     </MenuItem.Header>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem Click="CropSquare_Click">
                     <MenuItem.Header>
                         <iconPacks:PackIconMaterial Kind="CropSquare" Height="20" Width="24" Margin="0,5,0,5"/>
                     </MenuItem.Header>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem Click="PolygonButton_Click">
                     <MenuItem.Header>
                         <iconPacks:PackIconMaterial Kind="VectorPolygon" Height="20" Width="24" Margin="0,5,0,5"/>
                     </MenuItem.Header>
